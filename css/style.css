@@ -899,17 +899,7 @@ section .title::after{
 
 
 /* responsive media query start */
-@media(max-width: 1300px){
-    .home .max-width{
-        margin-left: 0px;
-    }
-  }
-@media(max-width: 1104px){
-    .about .about-content .left img{
-        height: 350px;
-        width: 350px;
-    }
-  }
+
 @media(max-width: 991px){
     .max-width{ 
         padding: 0 50px;
