@@ -4,6 +4,19 @@
     padding: 0;
     outline: none!important;
 }
+/* Global Css */
+:root{
+    --bg-dark: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-color);
+    --shadow-black-100: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-black-300: 0 5px 15px rgba(0,0,0,0.3);
+    --black-900: #000;
+    --black-400: #555;
+    --black-100: #f7f7f7;
+    --black-000: #fff;
+    --black-alpha-100: rgba(0,0,0,0.05);
+}
 body{
     font-family: font-family 'Poppins', sans-serif;
     font-size: 16px;
@@ -65,6 +78,22 @@ ul{
 .btn-2:hover{
     color: var(--main-color);
     background-color: #fff;
+}
+.owl-carousel .owl-dots{
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-carousel button.owl-dot{
+    height: 6px;
+    width: 24px;
+    background-color: #ddd;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+.owl-carousel button.owl-dot.active{
+    background-color: #2a14eb;
 }
 /* Preloader */
 .preloader{
@@ -529,67 +558,114 @@ section .title::after{
     border-color: #fff;
 }
 
-/* team section styling */
-.teams .title::after{
-    content: "Meet our talented team";
+/* App download section */
+.app-download{
+    background-image: url('../images/banner5.jpg');
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    margin-top: -100px;
 }
-.teams .carousel .card{
-    background: transparent;
-    border-radius: 6px;
-    padding: 25px 35px;
+.app-download .section-title h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
     text-align: center;
-    transition: all 0.3s ease;
+    margin: 0;
+    margin-bottom: 60px;
 }
-.teams .carousel .card:hover{
-    background: #2a14eb;
+.app-download::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #2a14eb;
+    opacity: 0.8;
+    
 }
-.teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+.app-download-item{
+    background-color: var(--black-000);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow-black-100);
+    height: 400px;
 }
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
+.app-download-item i{
+    font-size: 30px;
+    color: var(--main-color);
+    display: inline-block;
 }
-.teams .carousel .card .text{
-    font-size: 25px;
+.app-download-item h3{
+    font-size: 22px;
+    color: var(--black-900);
+    margin: 20px 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.app-download-item p{
+    font-size: 16px;
+    color: var(--black-400);
+    font-weight: 400;
+    margin: 0 0 30px;
+    line-height: 26px;
+}
+.app-download-item a .btn-2{
+    margin-bottom: 10px;
+}
+
+/* Team styling*/
+.team{
+    background-color: var(--black-100);
+}
+.team .section-title h2{
+    font-size: 40px;
+    color: var(--black-900);
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.team-item{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-black-100);
+}
+.team-item .image{
+    padding: 50px;
+}
+.team-item img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;   
+}
+.team-item .text{
+    padding: 30px;
+}
+.team-item h3{
+    font-size: 18px;
+    color: var(--black-900);
     font-weight: 500;
-    margin: 10px 0 7px 0;
+    margin: 15px 0 5px;
+    text-transform: capitalize;
 }
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #2a14eb;
-    transition: all 0.3s ease;
+.team-item span{
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    text-transform: capitalize;
 }
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid #2a14eb!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: #2a14eb!important;
-}
+
 
 /* Testimonials styling*/
 .testimonials .section-title{
@@ -838,6 +914,31 @@ section .title::after{
     .max-width{ 
         padding: 0 50px;
     }
+    .navbar-toggler{
+        background-color: #2a14eb;
+        box-shadow: var(--shadow-black-300);
+        height: 34px;
+        width: 44px;
+        padding: 0;
+        font-size: 17px;
+        color: #fff;
+    }
+    .navbar-nav{
+        background-color: #2a14eb;
+        box-shadow: var(--shadow-black-300);
+        height: 220px;
+    }
+    .navbar .nav-item{
+        margin: 0;
+        padding: 5px 15px;
+    }
+    .navbar .nav-item a{
+        margin-top: 10px;
+    }
+    .navbar.navbar-shrink .navbar-toggler,
+    .navbar.navbar-shrink .navbar-nav{
+        background-color: var(--main-color);
+    }
   }
 @media(max-width: 947px){
     .menu-btn{
@@ -890,6 +991,9 @@ section .title::after{
         justify-content: center;
         margin: 0 auto 60px;
     }
+    .about .about-content .left img{
+        height: 500px;
+    }
     .about .about-content .right{
         flex: 100%;
     }
@@ -902,20 +1006,43 @@ section .title::after{
         width: 100%;
         margin-bottom: 30px;
     }
+    .app-download-item{
+        margin-bottom: 30px;
+    }
+    .app-download {
+        margin-top: -130px;
+    }
+    .team-item .image{
+        padding: 50px;
+    }
+    .team-item .text{
+        padding: 30px;
+    }
 
 }
 @media(max-width: 690px){
     .max-width{ 
         padding: 0 23px;
     }
-    .home .home-content .text-2{
-        font-size: 60px;
+    .home .banner img{
+        height: 800px;
+        position: relative;
+        top: 0;
     }
-    .home .home-content .text-3{
-        font-size: 32px;
+    .home-text{
+        margin-bottom: -20px;
     }
-    .home .home-content a{
+    .home .home-text .text-1{
+        font-size: 30px;
+    }
+    .home .home-text .text-2{
+        font-size: 15px;
+    }
+    .home .home-text .text-3{
         font-size: 20px;
+    }
+    .home .home-text a{
+        font-size: 12px;
     }
     .services .serv-content .card,
     .skills .skills-content .column{
@@ -924,17 +1051,21 @@ section .title::after{
     .teams .carousel .card .box{
         width: 100%;
     }
+    .footer-col h3{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
 
 }
 @media(max-width: 500px){
-    .home .home-content .text-2{
-        font-size: 50px;
+    .home .home-text .text-2{
+        font-size: 15px;
     }
-    .home .home-content .text-3{
-        font-size: 27px;
-    }
-    .home .home-content a{
+    .home .home-text .text-3{
         font-size: 20px;
+    }
+    .home .home-text a{
+        font-size: 12px;
     }
 }
 

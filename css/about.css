@@ -576,108 +576,172 @@ font-size: 18px;
 
 /* Responsive Styling */
 @media(max-width: 991px){
-    .navbar-toggler{
-        background-color: var(--dark-to-main-color);
-        box-shadow: var(--shadow-black-300);
-        height: 34px;
-        width: 44px;
-        padding: 0;
-        font-size: 17px;
-        color: #fff;
-    }
-    .navbar-nav{
-        background-color: var(--dark-to-main-color);
-        box-shadow: var(--shadow-black-300);
-    }
-    .navbar .nav-item{
-        margin: 0;
-        padding: 5px 15px;
-    }
-    .navbar.navbar-shrink .navbar-toggler,
-    .navbar.navbar-shrink .navbar-nav{
-        background-color: var(--main-color);
-    }
-    .home-img .circle{
-        height: 320px;
-        width: 320px;
-    }
-    .home-img .circle::before{
-        left: 18px;
-        top: 18px;
-        transform-origin: 142px 142px;
-    }
-    .home-text h1{
-        font-size: 40px;
-    }
-    .pricing-plan,
-    .how-it-works-item,
-    .app-download-item{
-        margin-bottom: 30px;
-    }
-    .how-it-works-item.line-right::before{
-        content: none;
-    }
-    .how-it-works-item{
-        box-shadow: var(--shadow-black-100);
-        border-radius: 10px;
-    }
-    .footer-col{
-        margin-bottom: 30px;
-    }
+  .max-width{ 
+      padding: 0 50px;
+  }
+  .navbar-toggler{
+      background-color: #2a14eb;
+      box-shadow: var(--shadow-black-300);
+      height: 34px;
+      width: 44px;
+      padding: 0;
+      font-size: 17px;
+      color: #fff;
+  }
+  .navbar-nav{
+      background-color: #2a14eb;
+      box-shadow: var(--shadow-black-300);
+      height: 220px;
+  }
+  .navbar .nav-item{
+      margin: 0;
+      padding: 5px 15px;
+  }
+  .navbar .nav-item a{
+      margin-top: 10px;
+  }
+  .navbar.navbar-shrink .navbar-toggler,
+  .navbar.navbar-shrink .navbar-nav{
+      background-color: var(--main-color);
+  }
 }
-@media(max-width: 767px){
-    .home-text{
-        margin-bottom: 80px;
-    }
-    .fun-fact-img{
-        margin-bottom: 30px;
-    }
-    .contact-form{
-        margin-top: 20px;
-    }
-    .section-title h2{
-        font-size: 35px;
-    }
-    .fun-facts .section-title h2{
-        text-align: center;
-    }
-    .section-title h1 span,
-    .news .section-title h1{
-        font-size: 25px;
-        margin-left: 120px;
-    }
-    .footer-col2{
-        margin-left: 10px;
-    }
-    .social-icons {
-        display: inline-block;
-        margin: 0;
-        padding: 5px 15px;
-    }
-    .navbar .nav-item .nav-link:hover{
-        color: #ba1c24;
-        transform: scale(1);
-    }
-    .navbar .nav-item .nav-link:is(:link, :active, :visited).active{
-        color: #ba1c24;
-        transform: scale(1);
-    }
-    .post-data title{
-        font-size: 20px;
-    }
-    
+@media(max-width: 947px){
+  .menu-btn{
+      display: block;
+      z-index: 999;
+  }
+  .menu-btn i.active::before{
+      content: "x";
+  }
+  .navbar .menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+      left: 0;
+  }
+  .navbar .menu li{
+      display: block;
+  }
+  .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+  }
+  .home .home-content .text-2{
+      font-size: 70px;
+  }
+  .home .home-content .text-3{
+      font-size: 35px;
+  }
+  .home .home-content a{
+      font-size: 23px;
+      padding: 10px 30px;
+  }
+  .about .about-content .column{
+      width: 100%;
+  }
+  .max-width{
+      max-width: 800px;
+  }
+  .about .about-content .left{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+  }
+  .about .about-content .left img{
+      height: 500px;
+  }
+  .about .about-content .right{
+      flex: 100%;
+  }
+  .services .serv-content .card{
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+  }
+  .skills .skills-content .column,
+  .contact .contact-content .column{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  .app-download-item{
+      margin-bottom: 30px;
+  }
+  .app-download {
+      margin-top: -130px;
+  }
+  .team-item .image{
+      padding: 50px;
+  }
+  .team-item .text{
+      padding: 30px;
+  }
+
 }
-@media(max-width: 575px){
-    .home-text h1{
-        font-size: 30px;
-    }
-    .home-text p{
-        font-size: 16px;
-    }
-    .section-title h2{
-        font-size: 30px;
-    }
+@media(max-width: 690px){
+  .max-width{ 
+      padding: 0 23px;
+  }
+  .home .banner img{
+      height: 800px;
+      position: relative;
+      top: 0;
+  }
+  .home-text{
+      margin-bottom: -20px;
+  }
+  .home .home-text .text-1{
+      font-size: 30px;
+  }
+  .home .home-text .text-2{
+      font-size: 15px;
+  }
+  .home .home-text .text-3{
+      font-size: 20px;
+  }
+  .home .home-text a{
+      font-size: 12px;
+  }
+  .services .serv-content .card,
+  .skills .skills-content .column{
+      width: 100%;
+  }
+  .teams .carousel .card .box{
+      width: 100%;
+  }
+  .footer-col h3{
+    margin-top: 15px;
+    margin-bottom: 10px;
+} 
+  .blog-write .title{
+    margin-left: 40px;
+  }
+  .blog-write .text img{
+    margin-left: 40px;
+  }
+
+
 }
+@media(max-width: 500px){
+  .home .home-text .text-2{
+      font-size: 15px;
+  }
+  .home .home-text .text-3{
+      font-size: 20px;
+  }
+  .home .home-text a{
+      font-size: 12px;
+  }
+}
+
+
 
 
 /*-----------------------------------*\ 
