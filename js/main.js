@@ -182,3 +182,15 @@ $('.blog-carousel').owlCarousel({
         }
     }
 });
+
+// Get the angle down icon element
+const angleDownIcon = document.querySelector('.fas.fa-angle-down');
+
+// Get the submenu element
+const subMenu = document.querySelector('.sub-menu');
+
+// Add a click event listener to the angle down icon
+angleDownIcon.addEventListener('click', function() {
+  // Toggle the visibility of the submenu
+  subMenu.classList.toggle('show');
+});
