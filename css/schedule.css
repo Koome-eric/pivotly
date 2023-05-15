@@ -560,6 +560,9 @@ font-size: 18px;
         font-size: 17px;
         color: #fff;
     }
+    .navbar-toggler {
+        flex-shrink: 0;
+    }
     .navbar-nav{
         background-color: #2a14eb;
         box-shadow: var(--shadow-black-300);
