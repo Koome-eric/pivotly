@@ -14,21 +14,15 @@ $(window).on("scroll", function(){
         $(".navbar").removeClass("navbar-shrink");
     }
 });
-/*---------------- Video popup--------------------- */
-   const videoSrc = $("#player-1").attr("src");
-   $(".video-play-btn, .video-popup").on("click", function(){
-      if($(".video-popup").hasClass("open")){
-         $(".video-popup").removeClass("open");
-         $("#player-1").attr("src","");
-      }
-      else{
-        $(".video-popup").addClass("open");
-        if($("#player-1").attr("src")==''){
-        $("#player-1").attr("src",videoSrc);
-        }
-      }
-   });
 
+
+  // toggle menu/navbar script 
+  $(document).ready(function() {
+    $('.menu-btn').click(function() {
+      $('.menu').toggleClass("active");
+      $(this).find('i').toggleClass("active");
+    });
+  });
    /*----------------------Features corousel----------------------*/
    $('.features-carousel').owlCarousel({
     loop:true,
@@ -67,7 +61,7 @@ $(window).on("scroll", function(){
             
         },
         1000:{
-            items:4,
+            items:3,
             
         }
     }
@@ -183,14 +177,78 @@ $('.blog-carousel').owlCarousel({
     }
 });
 
-// Get the angle down icon element
-const angleDownIcon = document.querySelector('.fas.fa-angle-down');
+window.addEventListener('DOMContentLoaded', function() {
+    var navbarCollapse = document.getElementById('collapsibleNavbar');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarTogglerIcon = navbarToggler.querySelector('i');
+    var navbarNav = document.querySelector('.navbar-nav');
+  
+    function handleNavbarCollapse() {
+      if (window.innerWidth > 947) {
+        navbarCollapse.classList.remove('collapse');
+        navbarNav.classList.add('show');
+      } else {
+        navbarCollapse.classList.add('collapse');
+        navbarNav.classList.remove('show');
+      }
+    }
+  
+    handleNavbarCollapse();
+  
+    window.addEventListener('resize', function() {
+      handleNavbarCollapse();
+    });
+  
+    navbarTogglerIcon.addEventListener('click', function() {
+      if (window.innerWidth <= 947) {
+        navbarNav.classList.toggle('show');
+      }
+    });
+  });
 
-// Get the submenu element
-const subMenu = document.querySelector('.sub-menu');
-
-// Add a click event listener to the angle down icon
-angleDownIcon.addEventListener('click', function() {
-  // Toggle the visibility of the submenu
-  subMenu.classList.toggle('show');
-});
+  window.addEventListener('DOMContentLoaded', function() {
+    var navbarCollapse = document.getElementById('collapsibleNavbar');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarTogglerIcon = navbarToggler.querySelector('i');
+    var navbarNav = document.querySelector('.navbar-nav');
+  
+    function handleNavbarCollapse() {
+      if (window.innerWidth > 947) {
+        navbarCollapse.classList.remove('collapse');
+        navbarNav.classList.add('show');
+      } else {
+        navbarCollapse.classList.add('collapse');
+        navbarNav.classList.remove('show');
+      }
+    }
+  
+    handleNavbarCollapse();
+  
+    window.addEventListener('resize', function() {
+      handleNavbarCollapse();
+    });
+  
+    navbarTogglerIcon.addEventListener('click', function() {
+      if (window.innerWidth <= 947) {
+        navbarNav.classList.toggle('show');
+      }
+    });
+  
+    var navItems = document.querySelectorAll('.navbar-nav .nav-item');
+    for (var i = 0; i < navItems.length; i++) {
+      navItems[i].addEventListener('click', function(event) {
+        if (window.innerWidth <= 947) {
+          var subMenu = this.querySelector('#sub-menu');
+          if (subMenu) {
+            subMenu.style.display = 'block';
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        }
+      });
+    }
+  });
+  
+  
+  
+  
