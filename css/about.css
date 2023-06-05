@@ -173,6 +173,9 @@ ul{
     color: #fff;
     text-transform: capitalize;
 }
+.navbar .navbar-brand img{
+  width: 65px;
+}
 .navbar .nav-item{
     margin-left: 40px;
 }
