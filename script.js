@@ -28,15 +28,16 @@ $(document).ready(function(){
 
      });
 
-     //typing animation script
-     var typed = new Typed(".typing", {
+        // Typing animation script
+    const text = document.querySelector(".typing");
 
-        strings: ["Setup", "Automate", "Optimize", "Extend functionality of GHL", "Enhance performance"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = "Freelancer";
+        }, 0);
+    }
 
-     });
+    textLoad();
 
      // owl-carousel script
      $('.carousel').owlCarousel({
