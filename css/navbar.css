@@ -34,6 +34,12 @@ a{
 .logo-container img{
     width: 65px;
 }
+.logo-container .logo{
+    text-decoration: none;
+}
+.logo-container .logo:hover{
+    color: #fff;
+}
 
 .nav-btn{
     flex: 3;
