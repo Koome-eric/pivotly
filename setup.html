@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital MMB - App Landing Page</title>
+    <title>Pivotly Setup</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- owl carousel css --> 
@@ -46,7 +46,7 @@
                   <div class="nav-links">
                       <ul>
                           <li class="nav-link" style="--i: .6s">
-                              <a href="#">Home</a>
+                              <a href="index.html">Home</a>
                           </li>
                           <li class="nav-link" style="--i: .85s">
                               <a href="#">Products<i class="fas fa-caret-down"></i></a>
@@ -106,8 +106,8 @@
                   </div>
   
                   <div class="log-sign" style="--i: 1.8s">
-                      <a href="#" class="btn transparent">Log in</a>
-                      <a href="#" class="btn solid">Schedule a call</a>
+                      
+                      <a href="schedule.html" class="btn solid">Schedule a call</a>
                   </div>
               </div>
   
@@ -130,26 +130,16 @@
                 <div class="col-md-7">
                     <div class="home-text">
                         <h1>Setup And Customize Your GoHighLevel</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ullam deleniti porro maiores architecto earum.</p>
+                        <p>Unlock the Potential of GoHighLevel: Onboarding and Setup for Seamless CRM Integration. Your GoHighLevel account will be optimized, customized, and ready for immediate use.</p>
                         <div class="home-btn">
-                            <a href="#" data-scroll-goto="3" class="btn btn-1">Schedule a call</a>
+                            <a href="schedule.html" data-scroll-goto="3" class="btn btn-1">Schedule a call</a>
                             <button type="button" class="btn btn-1 video-play-btn">
                               <i class="fas fa-play"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 text-center">
-                    
-                    <div class="home-img">
-                        <div class="icon-image">
-                            <img src="images/icon.png">
-                        </div>
-                        <div class="pic">
-                        <img src="images/b3.png">
-                    </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -273,28 +263,28 @@
             <div class="how-it-works-item line-right">
               <div class="step">1</div>
               <h3>pick a plan</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore tenetur harum. Aliquam, inventore sit!</p>
+              <p>Choose the onboarding and setup plan that best suits your needs.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="how-it-works-item line-right">
               <div class="step">2</div>
-              <h3>We'll get the ball rolling</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore tenetur harum. Aliquam, inventore sit!</p>
+              <h3>order</h3>
+              <p>Placing your order is simple. Once you've decided on a plan, just follow our intuitive ordering process.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="how-it-works-item line-right">
               <div class="step">3</div>
-              <h3>ready to go!</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore tenetur harum. Aliquam, inventore sit!</p>
+              <h3>We'll get the ball rolling</h3>
+              <p>Once you've selected a plan, our experienced team will take charge.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="how-it-works-item">
               <div class="step">4</div>
-              <h3>order</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore tenetur harum. Aliquam, inventore sit!</p>
+              <h3>ready to go!</h3>
+              <p>After our dedicated team has completed the setup and customization, your GoHighLevel account will be fully prepared and optimized for immediate use. </p>
             </div>
           </div>
         </div>
@@ -337,7 +327,7 @@
                 <p>Enjoy a complimentary 7-day support pass for any inquiries and 'how to use' questions.</p>
               </div>
               <div class="pricing-footer">
-                <a href="#" class="btn btn-2">get started</a>
+                <button id="signHereBtn">Sign Here</button>
               </div>
             </div>
           </div> <div class="col-lg-4 col-md-6">
@@ -366,7 +356,7 @@
                 <p>Enjoy a complimentary 1-month support pass for any inquiries and 'how to use' questions.</p>
               </div>
               <div class="pricing-footer">
-                <a href="#" class="btn btn-2">get started</a>
+                <button id="signHereBtn2">Sign Here</button>
               </div>
             </div>
           </div>
@@ -398,7 +388,20 @@
                 <p>Enjoy a complimentary 6-months support pass for any inquiries and 'how to use' questions</p>
             </div>
               <div class="pricing-footer">
-                <a href="#" class="btn btn-2">get started</a>
+                <button id="signHereBtn3">Sign Here</button>
+              </div>
+            </div>
+          </div>
+          <div id="popupContainer" class="popup">
+            <div class="popupContent">
+              <h2>Select Payment Method</h2>
+              <button id="paypalBtn">Paypal</button>
+              <div class="icon1">
+                <i class="fab fa-paypal"></i>
+              </div>
+              <button id="wiseBtn">Wise</button>
+              <div class="icon1">
+                <i class="fas fa-receipt"></i>
               </div>
             </div>
           </div>
@@ -457,7 +460,30 @@
     <!-- Toggle Theme end -->
 
 
-    
+<script>
+document.getElementById("signHereBtn").addEventListener("click", function() {
+  document.getElementById("popupContainer").style.display = "block";
+});
+
+document.getElementById("signHereBtn2").addEventListener("click", function() {
+  document.getElementById("popupContainer").style.display = "block";
+});
+
+document.getElementById("signHereBtn3").addEventListener("click", function() {
+  document.getElementById("popupContainer").style.display = "block";
+});
+
+document.getElementById("paypalBtn").addEventListener("click", function() {
+  alert("Paypal selected");
+  document.getElementById("popupContainer").style.display = "none";
+});
+
+document.getElementById("wiseBtn").addEventListener("click", function() {
+  alert("Wise selected");
+  document.getElementById("popupContainer").style.display = "none";
+});
+
+</script>    
 <!-- jquery js -->
 <script src="js/jquery.min.js"></script>
 <!-- popper js -->

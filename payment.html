@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pop-up Example</title>
+  <style>
+    .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    }
+
+    .popupContent {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+.popupContent h2 {
+  margin-top: 0;
+}
+
+.popupContent button {
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <button id="signHereBtn">Sign Here</button>
+
+  <div id="popupContainer" class="popup">
+    <div class="popupContent">
+      <h2>Select Payment Method</h2>
+      <button id="paypalBtn">Paypal</button>
+      <button id="wiseBtn">Wise</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signHereBtn").addEventListener("click", function() {
+  document.getElementById("popupContainer").style.display = "block";
+});
+
+document.getElementById("paypalBtn").addEventListener("click", function() {
+  alert("Paypal selected");
+  document.getElementById("popupContainer").style.display = "none";
+});
+
+document.getElementById("wiseBtn").addEventListener("click", function() {
+  alert("Wise selected");
+  document.getElementById("popupContainer").style.display = "none";
+});
+
+  </script>
+</body>
+</html>
