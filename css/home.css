@@ -166,7 +166,7 @@ ul{
     margin: 0;
 }
 .section-title h2 span{
-    color: var(--main-color);
+    color: #15ff00;
 }
 .owl-carousel .owl-dots{
     padding: 0 15px;
@@ -374,26 +374,10 @@ section .title::after{
     text-align: justify;
     color: var(--black-400);
 }
-.about .about-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 12px 36px;
-    border-radius: 6px;
-    margin-top: 20px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-.about .title::after{
-    content: "Who are we";
-}
 
+.about .about-content .right a{
+    text-decoration: none;
+}
 
 /* service section styling */
 .services{
@@ -480,21 +464,15 @@ section .title::after{
 .skills .skills-content .right .text{
     color: var(--black-900);
 }
+.skills .skills-content .right .text span{
+    color: #15ff00;
+}
 .skills .skills-content .right p{
     text-align: justify;
     color: var(--black-400);
 }
 .skills .skills-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 12px 36px;
-    border-radius: 6px;
     margin-top: 20px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
 }
 
 
@@ -563,6 +541,10 @@ section .title::after{
     margin: 0;
     margin-bottom: 60px;
 }
+.app-download .section-title h2 span{
+    color: #15ff00;
+}
+
 .app-download::before{
     content: '';
     position: absolute;
@@ -738,7 +720,7 @@ section .title::after{
     margin: 0;
 }
 .contact .section-title h2 span{
-    color: var(--main-color);
+    color: #15ff00;
 }
 .contact-info h3{
     font-size: 22px;

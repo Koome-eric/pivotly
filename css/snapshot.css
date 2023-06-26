@@ -429,8 +429,12 @@ ul{
     background: var(--gradient-color);
     border-radius: 2rem;
 }
+
 .button .btn-2{
     border: 1px solid #15ff00;
+}
+.news .button a{
+    text-decoration: none;
 }
 
 @media screen and (min-width: 600px){

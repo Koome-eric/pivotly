@@ -481,6 +481,9 @@ ul{
 
 
 /* Pricing styling*/
+.pricing{
+    margin-top: -60px;
+}
 .pricing-plan{
     box-shadow: var(--shadow-black-100);
     border-radius: 10px;
@@ -709,4 +712,72 @@ ul{
     .section-title h2{
         font-size: 30px;
     }
+}
+
+/* pop-up styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    }
+
+    .popupContent {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+.popupContent h2 {
+  margin-top: 0;
+}
+
+.popupContent button {
+  margin-top: 10px;
+}
+
+.pricing-footer button {
+    background-color: var(--main-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-100);
+    font-weight: 500;
+}
+.pricing-footer button:hover{
+    background-color: #fff;
+    color: var(--main-color);
+}
+.popupContent button{
+    background-color: var(--main-color);
+    padding: 10px 28px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-100);
+    font-weight: 500;
+}
+.popupContent button:hover{
+    background-color: #fff;
+    color: #15ff00;
+}
+.popupContent .icon1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
 }
